@@ -1,19 +1,18 @@
 @use "../styles/styles" as *;
 
-
 .mobile-menu-wrapper {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   bottom: 0;
   background-color: $bg-color2;
   z-index: 999999;
   width: 100%;
   height: 100%;
-  transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  @include transition(all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86));
   opacity: 0;
   visibility: hidden;
-
 
   // Mobile Menu Logo
   .mobile-logo {
@@ -31,12 +30,11 @@
   .menu-toggle {
     border: 2px solid $white-color;
     position: absolute;
-    right: 20px;
     top: 30px;
+    right: 40px;
     padding: 0;
     line-height: 1;
-    width: 35px;
-    height: 35px;
+    @include equal-size(35px);
     line-height: 28px;
     font-size: 14px;
     z-index: 1;
@@ -59,7 +57,7 @@
     opacity: 0;
     visibility: hidden;
     transform: translateX(-100%);
-    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+    @include transition(all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86));
     z-index: 1;
     overflow-y: auto;
   }
@@ -67,13 +65,13 @@
   &.body-visible {
     opacity: 1;
     visibility: visible;
-    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+    @include transition(all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86));
 
     .mobile-menu-area {
       transform: translateX(0);
       opacity: 1;
       visibility: visible;
-      transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+      @include transition(all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86));
     }
   }
 
@@ -103,7 +101,6 @@
   }
 }
 
-
 // Mobile Menu
 .mobile-menu {
   padding-bottom: 25px;
@@ -127,7 +124,7 @@
         border-top: 1px solid $border-color;
       }
 
-      &.active>a {
+      &.active > a {
         color: $theme-color;
       }
 
@@ -142,14 +139,14 @@
         color: $white-color;
         letter-spacing: normal;
         text-transform: capitalize;
-        i{
+        
+        i {
           margin-right: 18px;
         }
-
       }
 
       &.active-class {
-        >a {
+        > a {
           color: $theme-color;
 
           &:before {
@@ -184,13 +181,12 @@
     }
 
     .submenu-item-has-children {
-
-      &.active>a>.mean-expand-class,
-      &.active-class>a>.mean-expand-class {
+      &.active > a > .mean-expand-class,
+      &.active-class > a > .mean-expand-class {
         color: $theme-color;
       }
 
-      >a {
+      > a {
         .mean-expand-class {
           @include absolute-centerY;
           right: 0;
@@ -207,7 +203,7 @@
           background-color: transparent;
 
           &:before {
-            content: '\f107';
+            content: "\f107";
             font-family: $icon-font;
             font-weight: 700;
           }
@@ -215,17 +211,17 @@
       }
 
       &.active-class {
-        >a {
+        > a {
           .mean-expand-class:before {
-            content: '\f106';
+            content: "\f106";
           }
         }
       }
     }
   }
 
-  >ul {
-    >li {
+  > ul {
+    > li {
       &:last-child {
         border-bottom: none;
       }
@@ -233,16 +229,19 @@
   }
 }
 
-
-@media (max-width: 400px) {
+@include sm {
   .mobile-menu-wrapper .mobile-menu-area {
     width: 100%;
     max-width: 270px;
   }
 }
+
 .mobile-menu-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 9998;
   opacity: 1;
@@ -251,26 +250,24 @@
 
 .mobile-menu-wrapper {
   position: fixed;
-  top: 0; right: 0;
+  top: 0;
+  right: 0;
   width: 280px;
   height: 100%;
-  background-color: var(--theme-color2);
+  background-color: $theme-color2;
   z-index: 9999;
   transform: translateX(0);
-  transition: transform 0.3s ease;
+  @include transition(transform 0.3s ease);
   visibility: visible;
 }
 
 .menu-toggle {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 30px;
+  right: 40px;
   background: transparent;
   border: none;
   font-size: 24px;
-  color: var(--white-color);
+  color: $white-color;
   cursor: pointer;
 }
-
-/* если хочешь изначально скрывать, то добавь классы и переключай через React,
-но для простоты сейчас так */

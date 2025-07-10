@@ -10,14 +10,18 @@
   cursor: pointer;
   font-size: 16px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   color: $white-color;
   padding: 10px 15px;
   transition: color 0.3s;
 }
 
+
+
+
+
 .language-button:hover {
-  color: var(--theme-color); /* Используй свою основную тему, если подключена */
+  color: var(--theme-color); 
 }
 
 /* Выпадающее меню языков */

@@ -400,23 +400,22 @@
 }
 
 .sidebar-close-btn {
-    position: absolute;
-    right: 30px;
-    top: 63px;
-    color: $gray-color;
-    @include transition;
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  color: $gray-color;
+  font-size: 50px; // ← вот это нужно
+  line-height: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  @include transition;
 
-    &:hover {
-        color: $theme-color;
-    }
-
-    svg {
-        fill: currentColor;
-        stroke: none;
-        width: 20px;
-        height: 20px;
-    }
+  &:hover {
+    color: $theme-color;
+  }
 }
+
 
 .sidebar-content {
     .sidebar-logo {

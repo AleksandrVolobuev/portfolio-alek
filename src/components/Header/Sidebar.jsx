@@ -20,7 +20,7 @@ const Sidebar = ({ onClose }) => (
       <div className="sidebar-content">
         <div className="sidebar-logo">
           <a className="dark-logo" href="index.html" aria-label="Homepage">
-            <img src="/assets/images/logo/site-logo-light.png" alt="Site Logo" />
+            <img src="/assets/images/logo/Alek2.png" alt="Logo" />
           </a>
         </div>
 

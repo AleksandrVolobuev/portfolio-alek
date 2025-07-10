@@ -1,6 +1,9 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 
 // Критичные стили загружаем сразу
+// src/main.jsx
+//import './scss/styles/_styles.scss';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "aos/dist/aos.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
