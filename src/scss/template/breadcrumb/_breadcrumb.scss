@@ -1,0 +1,106 @@
+.breadcrumb-section{
+    padding: 230px 0 149px;
+    position: relative;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include md{
+        padding: 200px 0 120px;
+    }
+    @include sm{
+        padding: 180px 0 100px;
+    }
+    @include mobile-xl{
+        padding: 150px 0 80px;
+    }
+    .title-outer{
+        text-align: center;
+        .page-title{
+            .title{
+                font-size: 36px;
+                line-height: 46px;
+                color: $white-color;
+                font-weight: 600;
+                @include laptop-l {
+                    font-size: 34px;
+                }
+            
+                @include tablet-s {
+                    font-size: 30px;
+                    letter-spacing: normal;
+                }
+            
+                @include mobile-xl {
+                    font-size: 28px;
+                }
+            
+                @include mobile-l {
+                    font-size: 24px;
+                }
+            }
+            .page-breadcrumb{
+                li{
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 8px;
+                    padding-right: 32px;
+                    font-size: 16px;
+                    color: var(--white-color);
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    &:first-child{
+                        &::before{
+                            position: absolute;
+                            content: "";
+                            top: 50%;
+                            right: 0;
+                            width: 20px;
+                            height: 2px;
+                            background: var(--bs-border-color9);
+                        }
+                    }
+                    a{
+                        i{
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bcb-shape1{
+        position: absolute;
+        left: 22%;
+        bottom: 32%;
+        @include lg{
+            left: 10%;
+        }
+        @include tablet-m{
+            left: 4%;
+        }
+        @include xs{
+            display: none;
+        }
+    }
+    .bcb-shape2{
+        position: absolute;
+        right: 20%;
+        bottom: 32%;
+        @include lg{
+            right: 10%;
+        }
+        @include tablet-m{
+            right: 4%;
+        }
+        @include xs{
+            display: none;
+        }
+    }    
+    .bcb-shape3{
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

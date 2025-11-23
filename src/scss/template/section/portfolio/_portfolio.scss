@@ -1,0 +1,181 @@
+@use "../../../styles/styles" as *;
+.portfolio-section {
+  background: var(--theme-color2);
+  .portfolio-filter-buttons {
+    .menu-filtering {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      @include mobile-xl {
+        gap: 30px;
+      }
+      @include mobile-m {
+        gap: 20px;
+        flex-direction: column;
+      }
+      li {
+        display: inline-block;
+        color: var(--white-color);
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.4s ease 0s;
+        cursor: pointer;
+        &.active {
+          color: var(--theme-color);
+        }
+      }
+    }
+  }
+  .pdesigner-portfolio__item {
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 420px;
+      @include md {
+        height: inherit;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background-image: linear-gradient(
+        0deg,
+        rgba(7, 19, 19, 0.9999999999999999) 0%,
+        rgba(7, 19, 19, 0.9999999999999999) 20%,
+        rgba(7, 19, 19, 0) 48%,
+        rgba(7, 19, 19, 0) 100%
+      );
+      transition: all 500ms ease;
+      opacity: 0;
+    }
+    &:hover::before {
+      opacity: 1;
+      height: 70%;
+    }
+    img {
+      @include xs {
+        width: 100%;
+      }
+    }
+
+    .pdesigner-portfolio__content {
+      position: absolute;
+      z-index: 2;
+      bottom: 20px;
+      inset-inline-start: 34px;
+      display: flex;
+      align-items: flex-end;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.7s;
+      ul {
+        li {
+          .pdesigner-portfolio__title {
+            display: inline-block;
+            font-size: 24px;
+            line-height: 28px;
+            color: var(--white-color);
+            font-weight: 600;
+            transform: translateX(30px);
+            transition: all 300ms ease;
+          }
+          .pdesigner-portfolio__category {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 400;
+            padding: 10px 20px;
+            color: var(--white-color);
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 0;
+              height: 2px;
+              background-color: var(--theme-color);
+              opacity: 0;
+              transition: all 300ms ease;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .pdesigner-portfolio__content {
+        opacity: 1;
+        visibility: visible;
+        .pdesigner-portfolio__title {
+          transform: translateX(0);
+        }
+        .pdesigner-portfolio__category {
+          padding-left: 70px;
+          &::before {
+            width: 60px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .portfolio-btn {
+    margin-top: 70px;
+    text-align: center;
+    .btn-mask {
+      background-color: rgba(36, 233, 145, 0.10196078431372549);
+      border: none;
+      &:hover {
+        background: var(--white-color);
+      }
+    }
+  }
+}
+.portfolio-btn a {
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  color: var(--black-color2);
+  background: var(--theme-color);
+  gap: 10px;
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  z-index: 1;
+  cursor: pointer;
+
+  i {
+    font-size: 16px;
+    padding-inline-start: 5px;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover {
+    background: var(--white-color);
+    color: var(--theme-color);
+
+    i {
+      transform: translateX(5px);
+      color: var(--theme-color);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .portfolio-btn a {
+    padding: 15px 21px;
+  }
+}

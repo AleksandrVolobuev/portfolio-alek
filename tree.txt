@@ -1,0 +1,134 @@
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── public
+│   └── assets
+│       └── images
+│           ├── about
+│           ├── blog
+│           ├── brand
+│           ├── client
+│           ├── flags
+│           ├── hero
+│           ├── icons
+│           ├── logo
+│           ├── portfolio
+│           ├── resume
+│           ├── service
+│           └── shape
+├── README.md
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── components
+│   │   ├── AboutSection
+│   │   │   └── AboutSection.jsx
+│   │   ├── BlogSection
+│   │   │   └── BlogSection.jsx
+│   │   ├── BrandSection
+│   │   │   └── BrandSection.jsx
+│   │   ├── ContactSection
+│   │   │   └── ContactSection.jsx
+│   │   ├── FeatureSection
+│   │   │   └── FeatureSection.jsx
+│   │   ├── Footer
+│   │   │   └── Footer.jsx
+│   │   ├── Header
+│   │   │   ├── Copyright.jsx
+│   │   │   ├── Header.jsx
+│   │   │   ├── HeaderLayout.jsx
+│   │   │   ├── HeaderLogo.jsx
+│   │   │   ├── HeaderSearch.jsx
+│   │   │   ├── HeaderStyleOne.jsx
+│   │   │   ├── HeaderStyleTwo.jsx
+│   │   │   ├── MenuItems.jsx
+│   │   │   ├── MobileMenu.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   └── StickyHeader.jsx
+│   │   ├── HeroSection
+│   │   │   └── HeroSection.jsx
+│   │   ├── Layout
+│   │   │   ├── Layout.jsx
+│   │   │   └── Layout.scss
+│   │   ├── MagicCursor
+│   │   │   └── MagicCursor.jsx
+│   │   ├── MarqueeSection
+│   │   │   └── MarqueeSection.jsx
+│   │   ├── PortfolioSection
+│   │   │   └── PortfolioSection.jsx
+│   │   ├── Preloader
+│   │   │   ├── Preloader.jsx
+│   │   │   └── Preloader.scss
+│   │   ├── PricingSection
+│   │   │   └── PricingSection.jsx
+│   │   ├── ResumeSection
+│   │   │   └── ResumeSection.jsx
+│   │   ├── ScrollToTop
+│   │   │   └── ScrollToTop.jsx
+│   │   ├── ServiceSection
+│   │   │   └── ServiceSection.jsx
+│   │   ├── TestimonialSection
+│   │   │   └── TestimonialSection.jsx
+│   │   └── utilities
+│   │       ├── OdometerCounter.jsx
+│   │       ├── SpringText1.jsx
+│   │       ├── SpringText.jsx
+│   │       ├── TypedText.jsx
+│   │       ├── TypingAnimation.jsx
+│   │       └── WaveText.jsx
+│   ├── i18n.js
+│   ├── index.css
+│   ├── locales
+│   │   ├── en
+│   │   │   └── translation.json
+│   │   ├── ru
+│   │   │   └── translation.json
+│   │   └── ua
+│   │       └── translation.json
+│   ├── main.jsx
+│   └── scss
+│       ├── base
+│       │   ├── _mixins.scss
+│       │   ├── _typography.scss
+│       │   └── _variables.scss
+│       ├── reset
+│       │   ├── _carousel-pagination.scss
+│       │   ├── _container.scss
+│       │   ├── _grid.scss
+│       │   ├── _input.scss
+│       │   ├── _mobile-menu.scss
+│       │   └── _reset.scss
+│       ├── spacing
+│       │   ├── _align.scss
+│       │   ├── _gap.scss
+│       │   ├── _margin.scss
+│       │   ├── _padding.scss
+│       │   ├── _radius.scss
+│       │   └── _section-space.scss
+│       ├── styles
+│       │   └── _styles.scss
+│       ├── template
+│       │   ├── breadcrumb
+│       │   ├── headers
+│       │   ├── section
+│       │   └── widget
+│       └── utilites
+│           ├── _animation.scss
+│           ├── _background.scss
+│           ├── _btns.scss
+│           ├── _common.scss
+│           ├── _font.scss
+│           ├── _icons.scss
+│           ├── _magicCursor.scss
+│           ├── _overlay.scss
+│           ├── _popupSearch.scss
+│           ├── _scrollto-top.scss
+│           ├── _selection.scss
+│           ├── _springText1.scss
+│           ├── _springText.scss
+│           ├── _text-color.scss
+│           ├── _titles.scss
+│           └── _waveText.scss
+├── tree.txt
+└── vite.config.js
